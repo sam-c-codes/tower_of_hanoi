@@ -48,6 +48,10 @@ public class TowerModel {
     {
         System.out.println("Move #" + ++moveCounter + " from " + source + " to " + destination);
         // TODO!!
+        if (towers[source].isEmpty()) {
+            System.out.print("Invalid, source is empty");
+            return;
+        }
     }
 
     // Helper method to nicely print the current model state.
