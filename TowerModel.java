@@ -52,6 +52,22 @@ public class TowerModel {
             System.out.print("Invalid, source is empty");
             return;
         }
+        int disk = towers[source].peek();
+        if (towers[destination].isEmpty()) {
+            towers[source].pop();
+            towers[destination].push(disk);
+        }
+        else {
+            int top = towers[destination].peek();
+            if (disk > top) {
+                print("Invalid")
+                return;
+            }
+            else {
+                towers[source].pop();
+                towers[destination].push(disk);
+            }
+        }
     }
 
     // Helper method to nicely print the current model state.
