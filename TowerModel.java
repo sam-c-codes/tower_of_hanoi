@@ -49,7 +49,7 @@ public class TowerModel {
         System.out.println("Move #" + ++moveCounter + " from " + source + " to " + destination);
         // TODO!!
         if (towers[source].isEmpty()) {
-            System.out.print("Invalid, source is empty");
+            System.out.println("Invalid, source is empty");
             return;
         }
         int disk = towers[source].peek();
@@ -60,7 +60,7 @@ public class TowerModel {
         else {
             int top = towers[destination].peek();
             if (disk > top) {
-                print("Invalid")
+                System.out.println("Invalid");
                 return;
             }
             else {
