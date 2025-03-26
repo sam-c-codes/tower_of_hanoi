@@ -22,6 +22,9 @@ public class TowerSolver {
             model.move(source, destination)
             return;
         }
+        solve(height - 1, source, destination, auxillary);
+        model.move(source, destination)
+        solve(height - 1, auxillary, source, destination)
     }
 
 }
